@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Colby Ryan",
+      "email": "Colby@productivepomo.com",
+      "image": "test.jpg"
+    },
+    {
+      "email": "me@me.com",
+      "name": "David Smith",
+      "image": "C:\\fakepath\\1593022320707.jpg",
+      "id": 2
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "userId": 1,
+      "categoryId": 1,
+      "name": "Test Task",
+      "date": "10/15/21",
+      "isComplete": false
+    }
+  ],
+  "notes": [
+    {
+      "id": 1,
+      "userId": 1,
+      "categoryId": 1,
+      "note": "Test note",
+      "date": "10/15/21"
+    }
+  ],
+  "taskCategory": [
+    {
+      "id": 1,
+      "name": "work"
+    }
+  ],
+  "notesCategory": [
+    {
+      "id": 1,
+      "name": "work"
+    }
+  ],
+  "session": [
+    {
+      "id": 1,
+      "userId": 1
+    }
+  ]
+}
