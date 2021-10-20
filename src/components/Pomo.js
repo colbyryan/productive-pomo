@@ -3,19 +3,24 @@ import { Route, Redirect } from "react-router-dom"
 import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
 import { NavBar } from "./nav/NavBar";
-
-
+import { ApplicationViews } from "./ApplicationViews";
+import { TaskList } from "./tasks/TaskList";
+import { Timer } from "./pomodoro/Timer";
 
 export const Pomo = () => (
 
     <>
-        <Route
+        < Route
+
             render={() => {
                 if (sessionStorage.getItem("productivePomo_user")) {
+
                     return (
                         <>
                             <NavBar />
-                            {/* <ApplicationViews /> */}
+                            <Timer />
+                            <ApplicationViews />
+                            <TaskList />
                         </>
                     )
                 } else {
@@ -24,7 +29,7 @@ export const Pomo = () => (
             }}
         />
 
-        <Route path="/login">
+        <Route Route path="/login" >
             <Login />
         </Route>
         <Route path="/register">
