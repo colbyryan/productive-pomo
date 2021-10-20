@@ -24,21 +24,26 @@ const SettingsContextProvider = (props) => {
         setStartAnimate(false)
     }
 
-    function stopTimer() {
-        setStartAnimate(false)
-    }
 
     const SettingsBtn = () => {
         setExecuting({})
         setPomo(0)
     }
 
+
+    const children = ({ remainingTime }) => {
+        const minutes = Math.floor(remainingTime / 60)
+        const seconds = remainingTime % 60
+        return `${minutes}:${seconds}`
+    }
+
+
     const updateExecute = updateSettings => {
         setExecuting(updateSettings)
         setTimerTime(updateSettings)
     }
 
-    const setTimerTime = evaluate => {
+    const setTimerTime = (evaluate) => {
         switch (evaluate.active) {
             case 'work':
                 setPomo(evaluate.work)
@@ -49,22 +54,19 @@ const SettingsContextProvider = (props) => {
             case 'long':
                 setPomo(evaluate.long)
                 break;
-
             default:
                 setPomo(0)
                 break;
         }
     }
 
-    const children = ({ remainingTime }) => {
-        const minutes = Math.floor(remainingTime / 60)
-        const seconds = remainingTime % 60
-
-        return `${minutes}:${seconds}`
+    function stopAnimate() {
+        setStartAnimate(false)
     }
 
+
     return (
-        <SettingContext.Provider value={{ stopTimer, updateExecute, pomo, executing, startAnimate, startTimer, pauseTimer, SettingsBtn, setCurrentTimer, updateExecute, children }}>
+        <SettingContext.Provider value={{ stopAnimate, updateExecute, pomo, executing, startAnimate, startTimer, pauseTimer, SettingsBtn, setCurrentTimer, children }}>
             {props.children}
         </SettingContext.Provider>
     )

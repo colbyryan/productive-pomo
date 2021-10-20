@@ -1,28 +1,27 @@
 import React, { useContext, useEffect } from "react"
-import { Children } from "react";
 import { SettingContext } from "../../context/SettingsContext";
 import Button from "../pomodoro/Button";
 import { SetPomo } from "../pomodoro/SetPomo";
 import CountDown from "./CountDown";
 
 export const Timer = () => {
-    const { pomodoro,
+    const {
+        pomo,
         executing,
         setCurrentTimer,
         SettingBtn,
-        Children,
+        children,
         startAnimate,
         startTimer,
         pauseTimer,
         updateExecute
     } = useContext(SettingContext)
 
-    useEffect(() => updateExecute(executing), [executing, startAnimate])
+    useEffect(() => updateExecute(executing), [updateExecute, executing, startAnimate])
 
     return (
-        <>
-            {pomodoro !== 0 ?
-                <SetPomo /> :
+        <div className="container">
+            {pomo !== 0 ?
                 <>
                     <ul className="lables">
                         <li>
@@ -35,14 +34,14 @@ export const Timer = () => {
                         <li>
                             <Button
                                 title="Short Break"
-                                activeClass={executing.active === 'work' && 'active-label'}
+                                activeClass={executing.active === 'short' && 'active-label'}
                                 _callback={() => setCurrentTimer('short')}
                             />
                         </li>
                         <li>
                             <Button
                                 title="Long Break"
-                                activeClass={executing.active === 'work' && 'active-label'}
+                                activeClass={executing.active === 'long' && 'active-label'}
                                 _callback={() => setCurrentTimer('long')}
                             />
                         </li>
@@ -51,20 +50,19 @@ export const Timer = () => {
                     <div className="time-container">
                         <div className="time-wrapper">
                             <CountDown
-                                key={pomodoro}
-                                timer={pomodoro}
+                                key={pomo}
+                                timer={pomo}
                                 animate={startAnimate}
                             >
-                                {Children}
+                                {children}
                             </CountDown>
                         </div>
                     </div>
                     <div className="button-wrapper">
-                        <Button title="Start" className={!startAnimate && 'activeClass'} _callback={startTimer} />
-                        <Button title="Pause" className={startAnimate && 'activeClass'} _callback={pauseTimer} />
+                        <Button title="Start" activeClass={!startAnimate && 'activeClass'} _callback={startTimer} />
+                        <Button title="Pause" activeClass={startAnimate && 'activeClass'} _callback={pauseTimer} />
                     </div>
-                </>
-            }
-        </>
+                </> : <SetPomo />}
+        </div>
     )
 }

@@ -1,11 +1,8 @@
 import React, { useContext, useState } from 'react'
 import { SettingContext } from '../../context/SettingsContext'
-import Button from './Button'
 
 
 export const SetPomo = () => {
-
-    const { updateExecute } = useContext(SettingContext)
 
     const [newTimer, setNewTimer] = useState({
         work: 0.3,
@@ -14,8 +11,10 @@ export const SetPomo = () => {
         active: 'work'
     })
 
-    const handleChange = e => {
-        const { name, value } = e.target
+    const { updateExecute } = useContext(SettingContext)
+
+    const handleChange = input => {
+        const { name, value } = input.target
         switch (name) {
             case 'work':
                 setNewTimer({
@@ -34,11 +33,11 @@ export const SetPomo = () => {
                     ...newTimer,
                     long: parseInt(value)
                 })
-
+                break;
             default:
                 break;
         }
-
+        console.log(newTimer)
     }
 
     const handleSubmit = e => {
@@ -47,13 +46,13 @@ export const SetPomo = () => {
     }
     return (
         <div className="form_container">
-            <form noValidate>
+            <form noValidate onSubmit={handleSubmit}>
                 <div className="input-wrapper">
-                    <input name="work" className="input" onChange={handleChange} value={newTimer.work} />
-                    <input name="shortBreak" className="input" onChange={handleChange} value={newTimer.short} />
-                    <input name="longBreak" className="input" onChange={handleChange} value={newTimer.long} />
+                    <input type="number" name="work" className="input" onChange={handleChange} value={newTimer.work} />
+                    <input type="number" name="shortBreak" className="input" onChange={handleChange} value={newTimer.short} />
+                    <input type="number" name="longBreak" className="input" onChange={handleChange} value={newTimer.long} />
                 </div>
-                <Button title="Set Timer" _callback={handleSubmit} onClick={console.log("clicked")} />
+                <button onClick={console.log("clicked")}>Set Timer</button>
             </form>
         </div>
     )
