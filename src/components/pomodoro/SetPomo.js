@@ -53,7 +53,7 @@ export const SetPomo = () => {
                     <input name="shortBreak" className="input" onChange={handleChange} value={newTimer.short} />
                     <input name="longBreak" className="input" onChange={handleChange} value={newTimer.long} />
                 </div>
-                <Button title="Set Timer" _callback={handleSubmit} />
+                <Button title="Set Timer" _callback={handleSubmit} onClick={console.log("clicked")} />
             </form>
         </div>
     )
