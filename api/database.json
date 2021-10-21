@@ -17,17 +17,41 @@
     {
       "id": 1,
       "userId": 1,
-      "categoryId": 1,
+      "taskCategoryId": 1,
       "name": "Test Task",
       "date": "10/15/21",
       "isComplete": false
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "taskCategoryId": 1,
+      "name": "Test Task #2",
+      "date": "10/15/21",
+      "isComplete": false
+    },
+    {
+      "name": "Tell Brady that he is a somewhat cool guy",
+      "date": "2021-10-22",
+      "isCompleted": false,
+      "userId": 1,
+      "taskCategory": 0,
+      "id": 3
+    },
+    {
+      "name": "This is another test task to see if it sets a category ",
+      "date": "2021-10-22",
+      "isCompleted": false,
+      "userId": 1,
+      "taskCategory": 0,
+      "id": 4
     }
   ],
   "notes": [
     {
       "id": 1,
       "userId": 1,
-      "categoryId": 1,
+      "noteCategoryId": 1,
       "note": "Test note",
       "date": "10/15/21"
     }
@@ -35,7 +59,15 @@
   "taskCategory": [
     {
       "id": 1,
-      "name": "work"
+      "name": "Daily"
+    },
+    {
+      "id": 2,
+      "name": "Weekly"
+    },
+    {
+      "id": 3,
+      "name": "Monthly"
     }
   ],
   "notesCategory": [

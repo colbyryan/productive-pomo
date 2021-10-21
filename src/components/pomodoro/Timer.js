@@ -62,7 +62,6 @@ export const Timer = () => {
                         <Button title="Start" activeClass={!startAnimate && 'activeClass'} _callback={startTimer} />
                         <Button title="Pause" activeClass={startAnimate && 'activeClass'} _callback={pauseTimer} />
                     </div>
-                    {console.log(pomo)}
                 </> : <SetPomo />}
         </div>
     )

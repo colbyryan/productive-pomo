@@ -5,9 +5,9 @@ import { SettingContext } from '../../context/SettingsContext'
 export const SetPomo = () => {
 
     const [newTimer, setNewTimer] = useState({
-        work: 0.3,
-        short: 0.2,
-        long: 1,
+        work: 25,
+        short: 5,
+        long: 15,
         active: 'work'
     })
 
@@ -37,7 +37,6 @@ export const SetPomo = () => {
             default:
                 break;
         }
-        console.log(newTimer)
     }
 
     const handleSubmit = e => {
