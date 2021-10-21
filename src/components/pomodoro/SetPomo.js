@@ -52,7 +52,7 @@ export const SetPomo = () => {
                     <input type="number" name="shortBreak" className="input" onChange={handleChange} value={newTimer.short} />
                     <input type="number" name="longBreak" className="input" onChange={handleChange} value={newTimer.long} />
                 </div>
-                <button onClick={console.log("clicked")}>Set Timer</button>
+                <button>Set Timer</button>
             </form>
         </div>
     )
