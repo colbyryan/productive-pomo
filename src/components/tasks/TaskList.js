@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { getAllTasks, deleteTask } from "../../modules/TaskManager";
+import { getAllTasks, deleteTask, completeTask, getTaskCateogry } from "../../modules/TaskManager";
 import { TaskCard } from "./TaskCard";
 
 export const TaskList = () => {
     const [tasks, setTasks] = useState([]);
+    const [categories, setCategories] = useState([])
 
     const getTasks = () => {
         return getAllTasks().then(tasksFromAPI => {
@@ -17,8 +18,21 @@ export const TaskList = () => {
             .then(() => getAllTasks().then(setTasks));
     }
 
+    const handleCompleteTask = (id) => {
+        completeTask(id)
+            .then(() => getAllTasks().then(setTasks));
+    }
+
+    const taskCategory = () => {
+        getTaskCateogry().then(res => setCategories(res))
+    }
+
+    const filterTaskCategory = () => {
+    }
+
     useEffect(() => {
         getTasks();
+        taskCategory();
     }, [])
 
     return (
@@ -32,10 +46,12 @@ export const TaskList = () => {
                 </div>
                 <div className="task__card">
                     <select name="Category" id="">
-                        <option value=""></option>
+                        {categories.map(category => (
+                            <option key={category.id} value={category.id} value={category.id}>{category.name}</option>
+                        ))}
                     </select>
-                    {tasks.map(task => task.isComplete ? console.log("true")
-                        : <TaskCard key={task.id} task={task} handleDeleteTask={handleDeleteTask} />)}
+                    {tasks.map(task => task.isCompleted ? console.log("true")
+                        : <TaskCard key={task.id} task={task} handleDeleteTask={handleDeleteTask} handleCompleteTask={handleCompleteTask} />)}
                 </div>
             </section>
         </>

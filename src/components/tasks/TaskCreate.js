@@ -9,9 +9,9 @@ export const TaskCreate = () => {
         date: "",
         isCompleted: false,
         userId: parseInt(sessionStorage.getItem("productivePomo_user")),
-        taskCategory: 0
+        taskCategoryId: 0
     });
-    const [category, setCategory] = useState([])
+    const [categories, setCategories] = useState([])
     const history = useHistory();
 
     const ResetForm = () => {
@@ -20,12 +20,12 @@ export const TaskCreate = () => {
             date: 0,
             isComplete: false,
             userId: parseInt(sessionStorage.getItem("productivePomo_user")),
-            taskCategory: 0
+            taskCategoryId: 0
         });
     }
 
     const taskCategory = () => {
-        getTaskCateogry().then(res => setCategory(res))
+        getTaskCateogry().then(res => setCategories(res))
     }
 
     const handleControlledInputChange = (event) => {
@@ -62,9 +62,9 @@ export const TaskCreate = () => {
                         Add a New Task
                     </div>
                     <fieldset>
-                        <select name="" id="">
-                            {category.map(taco => (
-                                <option key={taco.id} value={taco.id} className="form__task-category">{taco.name}</option>
+                        <select name="categories" id="taskCategoryId" onChange={handleControlledInputChange}>
+                            {categories.map(category => (
+                                <option key={category.id} value={category.id} className="form__task-category">{category.name}</option>
                             ))}
                         </select>
 

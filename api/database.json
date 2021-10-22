@@ -16,11 +16,11 @@
   "tasks": [
     {
       "id": 1,
+      "name": "Test Task 4",
+      "date": "2021-10-23",
+      "isComplete": false,
       "userId": 1,
-      "taskCategoryId": 1,
-      "name": "Test Task",
-      "date": "10/15/21",
-      "isComplete": false
+      "taskCategoryId": 3
     },
     {
       "id": 2,
@@ -28,23 +28,15 @@
       "taskCategoryId": 1,
       "name": "Test Task #2",
       "date": "10/15/21",
-      "isComplete": false
+      "isCompleted": false
     },
     {
-      "name": "Tell Brady that he is a somewhat cool guy",
-      "date": "2021-10-22",
+      "name": "Test the category",
+      "date": "2021-10-23",
       "isCompleted": false,
       "userId": 1,
-      "taskCategory": 0,
+      "taskCategoryId": 3,
       "id": 3
-    },
-    {
-      "name": "This is another test task to see if it sets a category ",
-      "date": "2021-10-22",
-      "isCompleted": false,
-      "userId": 1,
-      "taskCategory": 0,
-      "id": 4
     }
   ],
   "notes": [

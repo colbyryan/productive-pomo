@@ -41,3 +41,16 @@ export const updateTask = (editedTask) => {
         body: JSON.stringify(editedTask)
     }).then(data => data.json());
 }
+
+
+export const completeTask = (id) => {
+    return fetch(`${url}/tasks/${id}`, {
+        method: 'PATCH',
+        body: JSON.stringify({
+            isCompleted: true
+        }),
+        headers: {
+            "Content-type": "application/json"
+        }
+    }).then(res => res.json())
+}

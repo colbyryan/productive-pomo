@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useHistory, useParams } from "react-router";
-import { getTaskById } from "../../modules/TaskManager";
+import { getTaskById, updateTask } from "../../modules/TaskManager";
 import { getTaskCateogry } from "../../modules/TaskManager";
 
 export const TaskEdit = () => {
@@ -24,8 +24,8 @@ export const TaskEdit = () => {
     const taskCategory = () => {
         getTaskCateogry().then(res => setCategory(res))
     };
-    const updateExistingTask = (event) => {
-        event.preventDefault()
+    const updateExistingTask = (e) => {
+        e.preventDefault()
         setIsLoading(true);
 
         const editedTask = {
@@ -34,10 +34,10 @@ export const TaskEdit = () => {
             date: task.date,
             isComplete: false,
             userId: task.userId,
-            taskCategoryId: task.taskCategoryId
+            taskCategoryId: parseInt(task.taskCategoryId)
         };
 
-        updateExistingTask(editedTask)
+        updateTask(editedTask)
             .then(() => history.push("/"))
     }
 
@@ -58,7 +58,7 @@ export const TaskEdit = () => {
                         Edit Task
                     </div>
                     <fieldset>
-                        <select name="" id="">
+                        <select name="" id="taskCategoryId" onChange={handleFieldChange}>
                             {category.map(taco => (
                                 <option key={taco.id} value={taco.id} className="form__task-category">{taco.name}</option>
                             ))}
@@ -77,7 +77,8 @@ export const TaskEdit = () => {
                     </fieldset>
 
                     <div className="form__buttons">
-                        <button className="form__button" disabled={isLoading} onClick={updateExistingTask}>Save Task</button>
+                        <button className="form__button" disabled={isLoading} onClick={(e) =>
+                            updateExistingTask(e)}>Save Task</button>
                         <button className="form__button" onClick={() => { history.push("/") }}>Cancel</button>
                     </div>
 
