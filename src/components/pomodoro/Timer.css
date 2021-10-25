@@ -1,0 +1,38 @@
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.timer__set {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.lables {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  list-style-type: none;
+  margin: 20px;
+}
+.lables li {
+  margin: 0px 10px;
+}
+
+.time-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+.button-wrapper button {
+  display: flex;
+  justify-self: center;
+  margin: auto;
+}
+.button-wrapper {
+  display: flex;
+  flex-flow: row;
+  padding-top: 20px;
+}

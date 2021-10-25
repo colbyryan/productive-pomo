@@ -4,8 +4,7 @@ import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
 import { NavBar } from "./nav/NavBar";
 import { ApplicationViews } from "./ApplicationViews";
-import { TaskList } from "./tasks/TaskList";
-import { Timer } from "./pomodoro/Timer";
+// import { Timer } from "./pomodoro/Timer";
 
 export const Pomo = () => (
 
@@ -18,9 +17,8 @@ export const Pomo = () => (
                     return (
                         <>
                             <NavBar />
-                            <Timer />
+                            {/* <Timer /> */}
                             <ApplicationViews />
-                            <TaskList />
                         </>
                     )
                 } else {

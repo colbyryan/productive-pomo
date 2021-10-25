@@ -45,8 +45,11 @@ export const Timer = () => {
                                 _callback={() => setCurrentTimer('long')}
                             />
                         </li>
+                        <li>
+                            <Button className="settings__btn" title="Settings" _callback={SettingsBtn} />
+                        </li>
                     </ul>
-                    <Button title="Settings" _callback={SettingsBtn} />
+
                     <div className="time-container">
                         <div className="time-wrapper">
                             <CountDown
@@ -62,7 +65,6 @@ export const Timer = () => {
                         <Button title="Start" activeClass={!startAnimate && 'activeClass'} _callback={startTimer} />
                         <Button title="Pause" activeClass={startAnimate && 'activeClass'} _callback={pauseTimer} />
                     </div>
-                    {console.log(pomo)}
                 </> : <SetPomo />}
         </div>
     )

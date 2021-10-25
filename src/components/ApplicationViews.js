@@ -1,10 +1,34 @@
 import React from "react";
 import { Route } from "react-router";
+import { TaskCreate } from "./tasks/TaskCreate";
+import { TaskList } from "./tasks/TaskList";
+import { Timer } from "./pomodoro/Timer";
+import { TaskEdit } from "./tasks/TaskEdit";
+import { NoteList } from "./notes/NoteList";
+import { NoteEdit } from "./notes/NoteEdit";
+import { NoteCreate } from "./notes/NoteCreate";
+
 
 export const ApplicationViews = () => {
     return (
         <>
-            <Route exact path="/tasks">
+            <Route exact path="/">
+                <Timer />
+                <TaskList />
+                <NoteList />
+            </Route>
+
+            <Route exact path="/tasks/create">
+                <TaskCreate />
+            </Route>
+            <Route exact path="/tasks/:taskId(\d+)/edit">
+                <TaskEdit />
+            </Route>
+            <Route exact path="/notes/:noteId(\d+)/edit">
+                <NoteEdit />
+            </Route>
+            <Route exact path="/notes/create">
+                <NoteCreate />
             </Route>
         </>
     )

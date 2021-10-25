@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 import { SettingContext } from '../../context/SettingsContext'
+import "./Timer.css"
 
 const CountDown = ({ timer, animate, children }) => {
 

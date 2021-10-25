@@ -1,0 +1,6 @@
+.note__top {
+  display: flex;
+  flex-direction: row;
+  background-color: lightcoral;
+  width: 40%;
+}

@@ -16,32 +16,83 @@
   "tasks": [
     {
       "id": 1,
+      "name": "Test Task 4",
+      "date": "2021-10-23",
+      "isComplete": false,
       "userId": 1,
-      "categoryId": 1,
-      "name": "Test Task",
+      "taskCategoryId": 3
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "taskCategoryId": 1,
+      "name": "Test Task #2",
       "date": "10/15/21",
-      "isComplete": false
+      "isCompleted": false
+    },
+    {
+      "name": "Test the category",
+      "date": "2021-10-23",
+      "isCompleted": false,
+      "userId": 1,
+      "taskCategoryId": 3,
+      "id": 3
+    },
+    {
+      "name": "Test Test Test",
+      "date": "2021-10-26",
+      "isCompleted": false,
+      "userId": 1,
+      "taskCategoryId": 2,
+      "id": 4
+    },
+    {
+      "name": "Test",
+      "date": "2021-10-01",
+      "isCompleted": false,
+      "userId": 1,
+      "taskCategoryId": 1,
+      "id": 5
     }
   ],
   "notes": [
     {
       "id": 1,
       "userId": 1,
-      "categoryId": 1,
+      "notesCategoryId": 1,
       "note": "Test note",
       "date": "10/15/21"
+    },
+    {
+      "note": "Test Note Personal",
+      "date": "2021-10-25",
+      "userId": 1,
+      "notesCategoryId": 2,
+      "id": 2
     }
   ],
   "taskCategory": [
     {
       "id": 1,
-      "name": "work"
+      "name": "Daily"
+    },
+    {
+      "id": 2,
+      "name": "Weekly"
+    },
+    {
+      "id": 3,
+      "name": "Monthly"
     }
   ],
   "notesCategory": [
     {
       "id": 1,
-      "name": "work"
+      "name": "Work"
+    },
+    {
+      "id": 2,
+      "name": "Personal"
     }
   ],
   "session": [
