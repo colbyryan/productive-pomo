@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useHistory, useParams } from "react-router";
 import { getTaskById, updateTask } from "../../modules/TaskManager";
 import { getTaskCateogry } from "../../modules/TaskManager";
+import "./Tasks.css"
 
 export const TaskEdit = () => {
 

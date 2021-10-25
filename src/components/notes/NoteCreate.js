@@ -1,89 +1,86 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router";
-import { addTask } from "../../modules/TaskManager";
-import { getTaskCateogry } from "../../modules/TaskManager";
-import "./Tasks.css"
+import { addNote } from "../../modules/NotesManager";
+import { getNoteCateogry } from "../../modules/NotesManager";
+import "./Notes.css"
 
-export const TaskCreate = () => {
-    const [task, setTask] = useState({
-        name: "",
+export const NoteCreate = () => {
+    const [note, setNote] = useState({
+        note: "",
         date: "",
-        isCompleted: false,
         userId: parseInt(sessionStorage.getItem("productivePomo_user")),
-        taskCategoryId: 1
+        notesCategoryId: 1
     });
     const [categories, setCategories] = useState([])
     const history = useHistory();
 
     const ResetForm = () => {
-        setTask({
-            name: "",
+        setNote({
+            note: "",
             date: 0,
-            isComplete: false,
             userId: parseInt(sessionStorage.getItem("productivePomo_user")),
-            taskCategoryId: 0
+            notesCategoryId: 1
         });
     }
 
-    const taskCategory = () => {
-        getTaskCateogry().then(res => setCategories(res))
+    const noteCategory = () => {
+        getNoteCateogry().then(res => setCategories(res))
     }
 
     const handleControlledInputChange = (event) => {
-        console.log(event)
         event.preventDefault()
-        const newTask = { ...task }
+        const newNote = { ...note }
         let selectedVal = event.target.value
         if (event.target.id.includes("Id")) {
             selectedVal = parseInt(selectedVal)
         }
-        newTask[event.target.id] = selectedVal
-        setTask(newTask)
+        newNote[event.target.id] = selectedVal
+        setNote(newNote)
     }
 
-    const handleClickSaveTask = (event) => {
+    const handleClickSaveNote = (event) => {
         event.preventDefault()
-        const nameList = task.name
-        const dateList = task.date
+        const nameList = note.note
+        const dateList = note.date
 
         if (nameList === "" || dateList === "") {
             window.alert("Please Fill out all required info")
         } else {
-            addTask(task).then(() => history.push("/"))
+            addNote(note).then(() => history.push("/"))
         }
     }
     useEffect(() => {
-        taskCategory();
+        noteCategory();
     }, [])
     return (
         <>
             <div className="form__flex">
                 <form>
 
-                    <div className="form__add-task">
-                        Add a New Task
+                    <div className="form__add-note">
+                        Add a New Note
                     </div>
                     <fieldset>
-                        <select name="categories" id="taskCategoryId" onChange={handleControlledInputChange}>
+                        <select name="categories" id="notesCategoryId" onChange={handleControlledInputChange}>
                             {categories.map(category => (
-                                <option key={category.id} value={category.id} className="form__task-category">{category.name}</option>
+                                <option key={category.id} value={category.id} className="form__note-category">{category.name}</option>
                             ))}
                         </select>
 
                         <div className="fieldset__group">
-                            <label htmlFor="name">Enter Task: </label>
-                            <input type="text" id="name" onChange={handleControlledInputChange} required autoFocus className="fieldset__group--edit" placeholder="task" value={task.name} />
+                            <label htmlFor="name">Enter Note: </label>
+                            <input type="text" id="note" onChange={handleControlledInputChange} required autoFocus className="fieldset__group--edit" placeholder="Note" value={note.note} />
                         </div>
 
                         <div className="fieldset__group">
-                            <label htmlFor="date">Select Due Date: </label>
+                            <label htmlFor="date">Date: </label>
                             <input type="date" id="date" onChange={handleControlledInputChange} required className="fieldset__group--edit" />
                         </div>
 
                     </fieldset>
 
                     <div className="form__buttons">
-                        <button className="form__button" onClick={handleClickSaveTask}>Create Task</button>
+                        <button className="form__button" onClick={handleClickSaveNote}>Create Note</button>
                         <button className="form__button" onClick={ResetForm}>Rest Form</button>
                         <button className="form__button" onClick={() => { history.push("/") }}>Cancel</button>
                     </div>

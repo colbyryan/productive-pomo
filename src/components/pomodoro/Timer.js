@@ -45,8 +45,11 @@ export const Timer = () => {
                                 _callback={() => setCurrentTimer('long')}
                             />
                         </li>
+                        <li>
+                            <Button className="settings__btn" title="Settings" _callback={SettingsBtn} />
+                        </li>
                     </ul>
-                    <Button title="Settings" _callback={SettingsBtn} />
+
                     <div className="time-container">
                         <div className="time-wrapper">
                             <CountDown

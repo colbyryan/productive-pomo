@@ -1,70 +1,162 @@
-# Getting Started with Create React App
+# Productive Pomo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Image](https://github.com/nss-day-cohort-51/nutshell-ghoul-diggers/blob/main/src/images/NutshellDashboard.png)
 
-## Available Scripts
+> Everything you need to keep up with your friends in a Nutshell!
 
-In the project directory, you can run:
+---
 
-### `npm start`
+### Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Description](#description)
+- [Technologies](#technologies)
+- [How To Use](#how-to-use)
+- [License](#license)
+- [Author Info](#author-info)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## Description
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Nutshell is a React App built for users to have the capability to post and view news articles, local events, and post public/private messages with their added friends. It focuses on a sleek, simple, and interactive design that makes it easy for the user to digest the content of the webpage. We achieved this by selecting a vibrant-like color scheme and structuring the layout of the page in a spacious, yet efficient way. We focused on creating an elegant design while also having strong user functionality.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Technologies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React.js
+- CSS
+- dbdiagram
+- Figma
+- Canva
+- Git/Github
+- Postman
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## How To Use
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Installations
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Run commands inside of Productive Pomo Directory.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+npm install npm@latest -g
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+npm install
+```
 
-## Learn More
+```
+npm install react-icons --save
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+npm install react-circle-timer --save
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+### Starting the webpage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Clone the repo
 
-### Analyzing the Bundle Size
+   ```
+   git clone git@github.com:nss-day-cohort-51/nutshell-ghoul-diggers.git
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Run this command inside of the Nutshell API directory.
 
-### Making a Progressive Web App
+   ```
+   json-server -p 8088 -w database.json
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   ```
+   npm start
+   ```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### API Reference
 
-### Deployment
+Create database.json file inside of the src directory and paste the following JSON.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```JSON
+   "users": [
+      {
+         "email": "admin@test.com",
+         "name": "Admin User",
+         "id": 1
+      }
+   ],
+   "articles": [
+      {
+         "id": 1,
+         "userId": 1,
+         "url": "http://www.google.com",
+         "title": "Google",
+         "synopsis": "See Google Homepage",
+         "timestamp": 1633634268923
+      }
+   ],
+     "messages": [
+      {
+         "post": "Example",
+         "userId": 1,
+         "timestamp": 1633694268923,
+         "id": 1
+      }
+   ],
+   "events": [
+      {
+         "id": 1,
+         "userId": 1,
+         "name": "Example",
+         "city": "Nashville, TN",
+         "zipcode": "37066",
+         "date": "2021-02-14"
+      }
+   ],
+   "tasks": [
+      {
+         "userId": 1,
+         "taskName": "Example",
+         "completeDate": "2021-11-11",
+         "isCompleted": false,
+         "id": 1
+      },
+```
 
-### `npm run build` fails to minify
+![ERD Image](https://github.com/nss-day-cohort-51/nutshell-ghoul-diggers/blob/main/src/images/NutshellERD.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Back To The Top](#productivepomo)
+
+---
+
+## License
+
+MIT License
+
+Copyright (c) 2021 Nashville Software School
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+[Back To The Top](#productivepomo)
+
+---
+
+## Author Info
+
+### Colby Ryan
+
+- LinkedIn - [Colby Ryan](https://www.linkedin.com/in/colbyrryan/)
+- GitHub - [@colbyryan](https://github.com/colbyryan)
+
+[Back To The Top](#productivepomo)
+
+---

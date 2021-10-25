@@ -1,0 +1,36 @@
+.container--login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.form--login fieldset {
+  border-style: none;
+}
+.form--login h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.form--login h2 {
+  display: flex;
+  justify-content: center;
+}
+.form--login button {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.form-control {
+  border-radius: 15px;
+  padding: 5px;
+}
+.login__buttons {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+.second__login--container {
+  background-color: #3d5a80;
+  color: white;
+}

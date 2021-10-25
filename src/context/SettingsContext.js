@@ -64,9 +64,13 @@ const SettingsContextProvider = (props) => {
         setStartAnimate(false)
     }
 
+    function myFunction() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+    }
 
     return (
-        <SettingContext.Provider value={{ stopAnimate, updateExecute, pomo, executing, startAnimate, startTimer, pauseTimer, SettingsBtn, setCurrentTimer, children }}>
+        <SettingContext.Provider value={{ stopAnimate, updateExecute, pomo, executing, startAnimate, startTimer, pauseTimer, SettingsBtn, setCurrentTimer, children, myFunction }}>
             {props.children}
         </SettingContext.Provider>
     )

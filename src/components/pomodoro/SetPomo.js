@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { SettingContext } from '../../context/SettingsContext'
+import "./Timer.css"
 
 
 export const SetPomo = () => {
@@ -51,7 +52,7 @@ export const SetPomo = () => {
                     <input type="number" name="shortBreak" className="input" onChange={handleChange} value={newTimer.short} />
                     <input type="number" name="longBreak" className="input" onChange={handleChange} value={newTimer.long} />
                 </div>
-                <button>Set Timer</button>
+                <button className="timer__set">Set Timer</button>
             </form>
         </div>
     )

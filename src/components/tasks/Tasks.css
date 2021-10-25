@@ -1,0 +1,8 @@
+.task__card {
+  display: flex;
+  width: 60%;
+  background: lightblue;
+}
+.task__section {
+  padding-top: 70px;
+}

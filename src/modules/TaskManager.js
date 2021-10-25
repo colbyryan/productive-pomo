@@ -1,7 +1,7 @@
 const url = "http://localhost:8088"
 
-export const getAllTasks = () => {
-    return fetch(`${url}/tasks?_sort=date&_order=asc`)
+export const getTasksByCategory = (taskCategoryId) => {
+    return fetch(`${url}/tasks?taskCategoryId=${taskCategoryId}`)
         .then(res => res.json());
 }
 

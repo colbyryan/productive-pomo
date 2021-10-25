@@ -39,29 +39,37 @@ export const Login = () => {
                 <button className="button--close" onClick={e => setExistDialog(false)}>Close</button>
             </dialog>
             <section>
+
                 <form className="form--login" onSubmit={handleLogin}>
                     <h1>Productive Pomo</h1>
-                    <h2>Please sign in</h2>
-                    <fieldset>
-                        <label htmlFor="inputEmail"> Email address </label>
-                        <input type="email"
-                            id="email"
-                            className="form-control"
-                            placeholder="Email address"
-                            required autoFocus
-                            value={loginUser.email}
-                            onChange={handleInputChange} />
-                    </fieldset>
-                    <fieldset>
+                    <div className="second__login--container">
+                        <fieldset>
+                            <h2>Login</h2>
+                            <p> Enter Email address </p>
+                            <label htmlFor="inputEmail"></label>
+                            <input type="email"
+                                id="email"
+                                className="form-control"
+                                placeholder="Email address"
+                                required autoFocus
+                                value={loginUser.email}
+                                onChange={handleInputChange} />
+                        </fieldset>
+
                         <button type="submit">
-                            Sign in
+                            Log in
                         </button>
-                    </fieldset>
+                    </div>
                 </form>
+
+                <div className="login__buttons">
+
+                    <section className="link--register">
+                        <Link to="/register">Create an Account</Link>
+                    </section>
+                </div>
             </section>
-            <section className="link--register">
-                <Link to="/register">Create an Account</Link>
-            </section>
+
         </main>
     )
 }
