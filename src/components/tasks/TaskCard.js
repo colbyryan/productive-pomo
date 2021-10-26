@@ -7,11 +7,15 @@ export const TaskCard = ({ task, handleDeleteTask, handleCompleteTask }) => {
         return (
             <>
                 <section className="task__card">
-                    <input type="checkbox" className="checkbox" onClick={() => handleCompleteTask(task.id)} />
-                    <div className="task__name">{task.name}</div>
-                    <div className="task__date">Due Date: {task.date}</div>
-                    <button className="btn" onClick={() => handleDeleteTask(task?.id)}>Delete</button>
-                    <Link to={`/tasks/${task?.id}/edit`}><button className="btn">Edit</button></Link>
+                    <div className="task__card--task">
+                        <input type="checkbox" className="checkbox" onClick={() => handleCompleteTask(task.id)} />
+                        <div className="task__name">{task.name}</div>
+                    </div>
+                    <div className="task__card--buttons">
+                        <div className="task__date">Due Date: {task.date}</div>
+                        <button className="btn" onClick={() => handleDeleteTask(task?.id)}>Delete</button>
+                        <Link to={`/tasks/${task?.id}/edit`}><button className="btn">Edit</button></Link>
+                    </div>
                 </section>
             </>
         )

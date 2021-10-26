@@ -1,8 +1,23 @@
 .task__card {
   display: flex;
-  width: 60%;
-  background: lightblue;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 .task__section {
-  padding-top: 70px;
+  flex: 2;
+  background-color: lightgray;
+  margin-right: 25px;
+  padding: 15px;
+  margin-top: 25px;
+  height: 300px;
+  margin-bottom: 25px;
+}
+.task__card--task {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.task__card--buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
 }

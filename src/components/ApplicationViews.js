@@ -1,12 +1,11 @@
 import React from "react";
 import { Route } from "react-router";
 import { TaskCreate } from "./tasks/TaskCreate";
-import { TaskList } from "./tasks/TaskList";
 import { Timer } from "./pomodoro/Timer";
 import { TaskEdit } from "./tasks/TaskEdit";
-import { NoteList } from "./notes/NoteList";
 import { NoteEdit } from "./notes/NoteEdit";
 import { NoteCreate } from "./notes/NoteCreate";
+import Lists from "./Lists";
 
 
 export const ApplicationViews = () => {
@@ -14,8 +13,7 @@ export const ApplicationViews = () => {
         <>
             <Route exact path="/">
                 <Timer />
-                <TaskList />
-                <NoteList />
+                <Lists />
             </Route>
 
             <Route exact path="/tasks/create">

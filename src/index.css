@@ -22,3 +22,9 @@ code {
   background-color: rgb(39, 38, 48);
   color: white;
 }
+
+.wrapper__lists {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
