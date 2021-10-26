@@ -45,7 +45,7 @@ export const NoteList = () => {
                     </Link>
 
                 </div>
-                {notes.map(note => { <NoteCard key={note.id} note={note} handleDeleteNote={handleDeleteNote} /> })}
+                {notes.map(note => <NoteCard key={note.id} note={note} handleDeleteNote={handleDeleteNote} />)}
 
             </section>
         </>

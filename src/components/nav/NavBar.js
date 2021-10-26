@@ -12,7 +12,7 @@ export const NavBar = () => {
     return (
         <nav>
             <div className="nav__logo">
-                <img src="" alt="" />
+                <img src="" alt="nothing" />
             </div>
             <div className="nav__title">
                 <h1>Productive Pomo</h1>
@@ -24,7 +24,7 @@ export const NavBar = () => {
                     sessionStorage.removeItem("productivePomo_user");
                     history.push("/login")
                 }}>Logout</button>
-                <img src={require("../../Images/colbyryan.jpg").default} alt="Profile Picture" />
+                <img src={require("../../Images/colbyryan.jpg").default} alt="User Profile" />
             </div>
         </nav>
     )
