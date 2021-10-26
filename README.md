@@ -1,6 +1,6 @@
 # Productive Pomo
 
-![Image](https://github.com/nss-day-cohort-51/nutshell-ghoul-diggers/blob/main/src/images/NutshellDashboard.png)
+![Image]())
 
 > Everything you need to keep up with your friends in a Nutshell!
 
@@ -17,8 +17,6 @@
 ---
 
 ## Description
-
-Nutshell is a React App built for users to have the capability to post and view news articles, local events, and post public/private messages with their added friends. It focuses on a sleek, simple, and interactive design that makes it easy for the user to digest the content of the webpage. We achieved this by selecting a vibrant-like color scheme and structuring the layout of the page in a spacious, yet efficient way. We focused on creating an elegant design while also having strong user functionality.
 
 ---
 
@@ -83,52 +81,10 @@ npm install react-circle-timer --save
 Create database.json file inside of the src directory and paste the following JSON.
 
 ```JSON
-   "users": [
-      {
-         "email": "admin@test.com",
-         "name": "Admin User",
-         "id": 1
-      }
-   ],
-   "articles": [
-      {
-         "id": 1,
-         "userId": 1,
-         "url": "http://www.google.com",
-         "title": "Google",
-         "synopsis": "See Google Homepage",
-         "timestamp": 1633634268923
-      }
-   ],
-     "messages": [
-      {
-         "post": "Example",
-         "userId": 1,
-         "timestamp": 1633694268923,
-         "id": 1
-      }
-   ],
-   "events": [
-      {
-         "id": 1,
-         "userId": 1,
-         "name": "Example",
-         "city": "Nashville, TN",
-         "zipcode": "37066",
-         "date": "2021-02-14"
-      }
-   ],
-   "tasks": [
-      {
-         "userId": 1,
-         "taskName": "Example",
-         "completeDate": "2021-11-11",
-         "isCompleted": false,
-         "id": 1
-      },
+
 ```
 
-![ERD Image](https://github.com/nss-day-cohort-51/nutshell-ghoul-diggers/blob/main/src/images/NutshellERD.png)
+![ERD Image]()
 
 [Back To The Top](#productivepomo)
 

@@ -3,6 +3,7 @@ import { SettingContext } from "../../context/SettingsContext";
 import Button from "../pomodoro/Button";
 import { SetPomo } from "../pomodoro/SetPomo";
 import CountDown from "./CountDown";
+import "./Timer.css"
 
 export const Timer = () => {
     const {

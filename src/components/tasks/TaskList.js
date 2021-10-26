@@ -7,21 +7,24 @@ import "./Tasks.css"
 export const TaskList = () => {
     const [tasks, setTasks] = useState([]);
     const [categories, setCategories] = useState([])
+    const [selectedCategory, setSelectedCategory] = useState(0)
+
 
     const getTasks = (categoryId) => {
-        return getTasksByCategory(categoryId).then(tasksFromAPI => {
+        setSelectedCategory(categoryId)
+        getTasksByCategory(categoryId).then(tasksFromAPI => {
             setTasks(tasksFromAPI)
         });
     }
 
     const handleDeleteTask = (id) => {
         deleteTask(id)
-            .then(() => getTasksByCategory().then(setTasks));
+            .then(() => getTasksByCategory(selectedCategory).then(setTasks));
     }
 
     const handleCompleteTask = (id) => {
         completeTask(id)
-            .then(() => getTasksByCategory().then(setTasks));
+            .then(() => getTasksByCategory(selectedCategory).then(setTasks));
     }
 
     const taskCategory = () => {
@@ -30,7 +33,7 @@ export const TaskList = () => {
 
     useEffect(() => {
         taskCategory();
-    }, [tasks])
+    }, [])
 
     return (
         <>
@@ -39,7 +42,7 @@ export const TaskList = () => {
                 <div className="task__card">
                     <div className="task__header">Tasks</div>
                     <select name="Category" id="" onChange={(evt) => { getTasks(evt.target.value) }}>
-                        <option value="0">Select a Category</option>
+                        <option value={selectedCategory}>Select a Category</option>
                         {categories.map(category => (
                             <option key={category.id} value={category.id}>{category.name}</option>
                         ))}

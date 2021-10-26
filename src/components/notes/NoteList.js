@@ -7,16 +7,18 @@ import "./Notes.css"
 export const NoteList = () => {
     const [notes, setNotes] = useState([]);
     const [categories, setCategories] = useState([])
+    const [selectedCategory, setSelectedCategory] = useState(0)
 
     const getNotes = (categoryId) => {
-        return getNotesByCategory(categoryId).then(notesFromAPI => {
+        setSelectedCategory(categoryId)
+        getNotesByCategory(categoryId).then(notesFromAPI => {
             setNotes(notesFromAPI)
         });
     }
 
     const handleDeleteNote = (id) => {
         deleteNote(id)
-            .then(() => getNotesByCategory().then(setNotes));
+            .then(() => getNotesByCategory(selectedCategory).then(setNotes));
     }
 
     const taskCategory = () => {
@@ -25,7 +27,7 @@ export const NoteList = () => {
 
     useEffect(() => {
         taskCategory();
-    }, [notes])
+    }, [])
 
     return (
         <>
@@ -34,7 +36,7 @@ export const NoteList = () => {
                     <div className="note__header">Notes</div>
                     <div className="note__card">
                         <select name="Category" id="" onChange={(evt) => { getNotes(evt.target.value) }}>
-                            <option value="0">Select a Category</option>
+                            <option value={selectedCategory}>Select a Category</option>
                             {categories.map(category => (
                                 <option key={category.id} value={category.id}>{category.name}</option>
                             ))}
