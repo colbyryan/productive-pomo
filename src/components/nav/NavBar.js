@@ -11,7 +11,9 @@ export const NavBar = () => {
 
     return (
         <nav>
-            <img src="" alt="" />
+            <div className="nav__logo">
+                <img src="" alt="" />
+            </div>
             <div className="nav__title">
                 <h1>Productive Pomo</h1>
                 <p><i>Focus and Flow</i></p>

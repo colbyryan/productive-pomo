@@ -39,12 +39,14 @@ export const NoteList = () => {
                                 <option key={category.id} value={category.id}>{category.name}</option>
                             ))}
                         </select>
-                        <Link to={`notes/create`}>
-                            <button className="add__note">Add a Note</button>
-                        </Link>
                     </div>
-                    {notes.map(note => { <NoteCard key={note.id} note={note} handleDeleteNote={handleDeleteNote} /> })}
+                    <Link to={`notes/create`}>
+                        <button className="add__note">Add a Note</button>
+                    </Link>
+
                 </div>
+                {notes.map(note => { <NoteCard key={note.id} note={note} handleDeleteNote={handleDeleteNote} /> })}
+
             </section>
         </>
     );
