@@ -12,7 +12,7 @@ export const NavBar = () => {
     return (
         <nav>
             <div className="nav__logo">
-                <img src="" alt="nothing" />
+                <img src={require("../../Images/productive-pomo-logo.jpg").default} alt="nothing" />
             </div>
             <div className="nav__title">
                 <h1>Productive Pomo</h1>

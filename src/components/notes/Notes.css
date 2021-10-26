@@ -12,3 +12,14 @@
   margin-top: 25px;
   margin-bottom: 25px;
 }
+
+.note__card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.note__card--buttons {
+  display: flex;
+  flex-direction: row;
+}

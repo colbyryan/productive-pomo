@@ -15,14 +15,6 @@
   ],
   "tasks": [
     {
-      "id": 1,
-      "name": "Test Task 4",
-      "date": "2021-10-23",
-      "isComplete": false,
-      "userId": 1,
-      "taskCategoryId": 3
-    },
-    {
       "id": 2,
       "userId": 2,
       "taskCategoryId": 1,
@@ -33,18 +25,18 @@
     {
       "name": "Test the category",
       "date": "2021-10-23",
-      "isCompleted": false,
+      "isCompleted": true,
       "userId": 1,
       "taskCategoryId": 3,
       "id": 3
     },
     {
-      "name": "Test Test Test",
-      "date": "2021-10-26",
-      "isCompleted": false,
+      "id": 4,
+      "name": "Test Test ",
+      "date": "2021-10-27",
+      "isComplete": false,
       "userId": 1,
-      "taskCategoryId": 2,
-      "id": 4
+      "taskCategoryId": 2
     },
     {
       "name": "Test",
@@ -53,6 +45,22 @@
       "userId": 1,
       "taskCategoryId": 1,
       "id": 5
+    },
+    {
+      "name": "Hello Brenda",
+      "date": "2021-11-27",
+      "isCompleted": false,
+      "userId": 1,
+      "taskCategoryId": 3,
+      "id": 6
+    },
+    {
+      "name": "Test Task 3",
+      "date": "2021-10-27",
+      "isCompleted": false,
+      "userId": 1,
+      "taskCategoryId": 1,
+      "id": 7
     }
   ],
   "notes": [
@@ -60,15 +68,15 @@
       "id": 1,
       "userId": 1,
       "notesCategoryId": 1,
-      "note": "Test note",
+      "note": "This is a long test note to see how the styling looks with longer text. This is a long test note to see how the styling looks with longer text. This is a long test note to see how the styling looks with longer text. This is a long test note to see how the styling looks with longer text.",
       "date": "10/15/21"
     },
     {
-      "note": "Test Note Personal",
-      "date": "2021-10-25",
+      "note": "Test Note Personal test",
+      "date": "2021-10-27",
       "userId": 1,
       "notesCategoryId": 2,
-      "id": 2
+      "id": 3
     }
   ],
   "taskCategory": [
