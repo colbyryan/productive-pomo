@@ -1,9 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap");
+
 .task__card {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 .task__section {
+  font-family: "Raleway", sans-serif;
   flex: 2;
   background-color: lightgray;
   margin-right: 25px;
@@ -11,6 +14,8 @@
   margin-top: 25px;
   height: 300px;
   margin-bottom: 25px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
 }
 .task__card--task {
   display: flex;
@@ -20,4 +25,40 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
+}
+.btn {
+  margin: 0px 10px;
+  font-family: "Raleway", sans-serif;
+}
+.task__date {
+  margin-right: 15px;
+}
+.task__name {
+  margin-left: 15px;
+}
+.task__card--select {
+  font-family: "Raleway", sans-serif;
+  border-radius: 5px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+.task__card--select:hover {
+  background-color: rgb(231, 231, 231);
+}
+.add__task {
+  font-family: "Raleway", sans-serif;
+  border: none;
+  width: 70px;
+  height: 30px;
+  border-radius: 15px;
+  background: transparent;
+}
+.add__task:hover {
+  background: white;
+  transition: 0.5s;
+}
+.task__header {
+  padding-left: 10px;
 }

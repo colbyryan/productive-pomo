@@ -5,11 +5,11 @@ import "./Timer.css"
 
 const CountDown = ({ timer, animate, children }) => {
 
+    const { stopAnimate, darkMode } = useContext(SettingContext)
     const [key, setKey] = useState(0)
 
-
-
-    const { stopAnimate } = useContext(SettingContext)
+    let dark = ['#293241', 1]
+    let light = ['#FFFFFF', 1]
     return (
         <>
 
@@ -17,10 +17,10 @@ const CountDown = ({ timer, animate, children }) => {
                 key={key}
                 isPlaying={animate}
                 duration={timer * 60}
-                colors={[['#293241', 1]]}
+                colors={[darkMode ? light : dark]}
                 strokeWidth={12}
                 size={440}
-                trailColor="#ffffff"
+                trailColor={darkMode ? 'rgb(39, 38, 48)' : '#FFFFFF'}
                 onComplete={() => {
                     stopAnimate()
                 }}

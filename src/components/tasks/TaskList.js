@@ -41,15 +41,14 @@ export const TaskList = () => {
 
                 <div className="task__card">
                     <div className="task__header">Tasks</div>
-                    <select name="Category" id="" onChange={(evt) => { getTasks(evt.target.value) }}>
+                    <select className="task__card--select" name="Category" id="" onChange={(evt) => { getTasks(evt.target.value) }}>
                         <option value={selectedCategory}>Select a Category</option>
                         {categories.map(category => (
                             <option key={category.id} value={category.id}>{category.name}</option>
                         ))}
                     </select>
-
                     <Link to={`tasks/create`}>
-                        <button className="add__task">Add a Task</button>
+                        <button className="add__task">+ Task</button>
                     </Link>
                 </div>
                 <div className="task__create">
