@@ -4,22 +4,93 @@
   margin-bottom: 20px;
 }
 .note__section {
+  font-family: "Raleway", sans-serif;
   flex: 1;
-  margin-right: 50px;
-  margin-left: 25px;
-  background-color: lightgray;
+  border: rgb(212, 212, 212) 1px solid;
+  margin-right: 25px;
   padding: 15px;
   margin-top: 25px;
+  height: 300px;
   margin-bottom: 25px;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  margin-left: 20px;
+}
+
+.note__header {
+  padding-left: 20px;
+  font-size: 20px;
+  color: #3f5e86;
+  font-weight: 700;
 }
 
 .note__card {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-left: 10px;
+}
+
+.note__card a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.note__card button {
+  background: transparent;
+  border: none;
+  font-size: 17px;
+  color: #293241;
+}
+.note__card button:hover {
+  color: #528ddb;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.note__card a button {
+  background: transparent;
+  border: none;
+  font-size: 17px;
+  color: #293241;
+}
+.note__card a button:hover {
+  color: #528ddb;
+  transition: 0.6s;
+  cursor: pointer;
+}
+.note__card select {
+  font-family: "Raleway", sans-serif;
+  border-radius: 5px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+.note__card select:hover {
+  background-color: rgb(231, 231, 231);
 }
 
 .note__card--buttons {
   display: flex;
   flex-direction: row;
+}
+
+.add__note {
+  font-family: "Raleway", sans-serif;
+  border: none;
+  width: 120px;
+  height: 30px;
+  border-radius: 15px;
+  background: transparent;
+  color: #3f5e86;
+  font-weight: 700;
+  font-size: 17px;
+}
+.add__note:hover {
+  background: white;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  color: #528ddb;
+  transition: 0.5s;
+  cursor: pointer;
 }

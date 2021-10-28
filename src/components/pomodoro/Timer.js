@@ -4,6 +4,7 @@ import Button from "../pomodoro/Button";
 import { SetPomo } from "../pomodoro/SetPomo";
 import CountDown from "./CountDown";
 import "./Timer.css"
+import { FaRegSun } from "react-icons/fa";
 
 export const Timer = () => {
     const {
@@ -47,7 +48,7 @@ export const Timer = () => {
                             />
                         </li>
                         <li>
-                            <Button className="settings__btn" title="Settings" _callback={SettingsBtn} />
+                            <Button className="settings__btn" title={<FaRegSun />} _callback={SettingsBtn} />
                         </li>
                     </ul>
 

@@ -1,6 +1,8 @@
+import "./Timer.css"
+
 const Button = ({ title, _callback }) => {
     return (
-        <button onClick={_callback}>{title}</button>
+        <button className="main__btn" onClick={_callback}>{title}</button>
     )
 }
 

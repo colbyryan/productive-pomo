@@ -7,6 +7,7 @@ const SettingsContextProvider = (props) => {
     const [pomo, setPomo] = useState(0)
     const [executing, setExecuting] = useState({})
     const [startAnimate, setStartAnimate] = useState(false)
+    const [darkMode, setDarkMode] = useState(false)
 
     function setCurrentTimer(active_state) {
         updateExecute({
@@ -67,10 +68,16 @@ const SettingsContextProvider = (props) => {
     function myFunction() {
         var element = document.body;
         element.classList.toggle("dark-mode");
+        if (darkMode === false) {
+            setDarkMode(true)
+        } else {
+            setDarkMode(false)
+        }
+        console.log(darkMode)
     }
 
     return (
-        <SettingContext.Provider value={{ stopAnimate, updateExecute, pomo, executing, startAnimate, startTimer, pauseTimer, SettingsBtn, setCurrentTimer, children, myFunction }}>
+        <SettingContext.Provider value={{ darkMode, stopAnimate, updateExecute, pomo, executing, startAnimate, startTimer, pauseTimer, SettingsBtn, setCurrentTimer, children, myFunction }}>
             {props.children}
         </SettingContext.Provider>
     )
