@@ -57,11 +57,12 @@
 }
 .task__card--select:hover {
   background-color: rgb(231, 231, 231);
+  transition: 0.6s;
 }
 .add__task {
   font-family: "Raleway", sans-serif;
   border: none;
-  width: 70px;
+  width: 120px;
   height: 30px;
   border-radius: 15px;
   background: transparent;
@@ -81,4 +82,90 @@
   font-size: 20px;
   color: #3f5e86;
   font-weight: 700;
+}
+
+/* TASK EDIT  */
+
+.form__flex {
+  display: flex;
+  justify-content: center;
+}
+.form__fieldset {
+  width: 510px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  border: rgb(212, 212, 212) 1px solid;
+}
+.form__add-task {
+  text-align: center;
+  margin: 20px 0px;
+  color: #3f5e86;
+  font-weight: 700;
+  font-size: 17px;
+}
+.form__fieldset select {
+  text-align: center;
+  width: 100px;
+  margin-bottom: 15px;
+  margin-left: 200px;
+  margin-top: 15px;
+  border: rgb(172, 172, 172) 1px solid;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 3px;
+  font-size: 15px;
+}
+
+.fieldset__group input {
+  margin-left: 50px;
+  border: rgb(172, 172, 172) 1px solid;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 5px;
+}
+.fieldset__group label {
+  margin-left: 10px;
+}
+.fieldset__group-date label {
+  margin-left: 10px;
+}
+.fieldset__group--edit {
+  border: rgb(172, 172, 172) 1px solid;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 5px;
+}
+.fieldset__group-date {
+  margin-top: 15px;
+  padding-bottom: 15px;
+}
+.fieldset__group-date input {
+  margin-left: 9px;
+}
+.form__buttons {
+  margin-top: 15px;
+}
+
+.form__buttons button {
+  margin-right: 8px;
+  background: transparent;
+  border: none;
+  color: #3f5e86;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 50px;
+  margin: 5px 10px;
+  padding: 5px 10px;
+}
+.form__buttons button:hover {
+  color: #528ddb;
+  background: white;
+  border-radius: 50px;
+  transition: 0.6s;
+  cursor: pointer;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }

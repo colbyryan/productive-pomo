@@ -7,6 +7,8 @@ nav {
   justify-content: flex-start;
 }
 .nav__logo img {
+  width: 100px;
+  height: 100px;
 }
 .nav__title {
   justify-content: center;
@@ -26,6 +28,7 @@ nav img {
   height: 50px;
   border-radius: 50px;
   margin: 20px;
+  background: white;
 }
 
 .nav__buttons {
@@ -38,8 +41,9 @@ nav img {
   height: 25px;
   border: none;
   background: transparent;
-  color: #293241;
+  color: #3f5e86;
   font-size: 15px;
+  border-radius: 25px;
 }
 .nav__buttons button:hover {
   color: #528ddb;
@@ -52,7 +56,7 @@ nav img {
   font-size: 25px;
   background: transparent;
   border: none;
-  color: #293241;
+  color: #3f5e86;
 }
 .theme--btn :hover {
   color: #528ddb;

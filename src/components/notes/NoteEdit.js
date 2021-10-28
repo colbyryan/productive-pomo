@@ -54,10 +54,10 @@ export const NoteEdit = () => {
             <div className="form__flex">
                 <form>
 
-                    <div className="form__edit-note">
+                    <div className="form__add-task">
                         Edit Note
                     </div>
-                    <fieldset>
+                    <fieldset className="form__fieldset">
                         <select name="" id="notesCategoryId" onChange={handleFieldChange}>
                             {category.map(categories => (
                                 <option key={categories.id} value={categories.id} className="form__note-category">{categories.name}</option>
@@ -69,8 +69,8 @@ export const NoteEdit = () => {
                             <input type="text" id="note" onChange={handleFieldChange} required className="fieldset__group--edit" value={note.note} />
                         </div>
 
-                        <div className="fieldset__group">
-                            <label htmlFor="date">Select Due Date: </label>
+                        <div className="fieldset__group-date-notes">
+                            <label htmlFor="date">Date: </label>
                             <input type="date" id="date" onChange={handleFieldChange} required className="fieldset__group--edit" />
                         </div>
 

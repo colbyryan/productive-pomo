@@ -55,10 +55,10 @@ export const TaskEdit = () => {
             <div className="form__flex">
                 <form>
 
-                    <div className="form__edit-task">
+                    <div className="form__add-task">
                         Edit Task
                     </div>
-                    <fieldset>
+                    <fieldset className="form__fieldset">
                         <select name="" id="taskCategoryId" onChange={handleFieldChange}>
                             {category.map(taco => (
                                 <option key={taco.id} value={taco.id} className="form__task-category">{taco.name}</option>
@@ -70,7 +70,7 @@ export const TaskEdit = () => {
                             <input type="text" id="name" onChange={handleFieldChange} required className="fieldset__group--edit" value={task.name} />
                         </div>
 
-                        <div className="fieldset__group">
+                        <div className="fieldset__group-date">
                             <label htmlFor="date">Select Due Date: </label>
                             <input type="date" id="date" onChange={handleFieldChange} required className="fieldset__group--edit" />
                         </div>

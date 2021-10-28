@@ -39,12 +39,12 @@
       "taskCategoryId": 2
     },
     {
-      "name": "Hello Brenda",
-      "date": "2021-11-27",
-      "isCompleted": false,
+      "id": 6,
+      "name": "Hello Scott",
+      "date": "2021-10-28",
+      "isComplete": false,
       "userId": 1,
-      "taskCategoryId": 3,
-      "id": 6
+      "taskCategoryId": 3
     },
     {
       "id": 8,
@@ -61,22 +61,53 @@
       "userId": 1,
       "taskCategoryId": 1,
       "id": 9
+    },
+    {
+      "name": "Make presentation for demo day.",
+      "date": "2021-10-28",
+      "isCompleted": false,
+      "userId": 1,
+      "taskCategoryId": 1,
+      "id": 11
+    },
+    {
+      "name": "Style login and register page.",
+      "date": "2021-10-28",
+      "isCompleted": false,
+      "userId": 1,
+      "taskCategoryId": 1,
+      "id": 12
+    },
+    {
+      "name": "Stress test every feature on app.",
+      "date": "2021-10-28",
+      "isCompleted": false,
+      "userId": 1,
+      "taskCategoryId": 1,
+      "id": 13
     }
   ],
   "notes": [
-    {
-      "id": 1,
-      "userId": 1,
-      "notesCategoryId": 1,
-      "note": "This is a long test note to see how the styling looks with longer text. This is a long test note to see how the styling looks with longer text. This is a long test note to see how the styling looks with longer text. This is a long test note to see how the styling looks with longer text.",
-      "date": "10/15/21"
-    },
     {
       "note": "Test Note Personal test",
       "date": "2021-10-27",
       "userId": 1,
       "notesCategoryId": 2,
       "id": 3
+    },
+    {
+      "note": "Remember to ask Susie about some of the styling colors and buttons",
+      "date": "2021-10-28",
+      "userId": 1,
+      "notesCategoryId": 1,
+      "id": 4
+    },
+    {
+      "note": "Test Note",
+      "date": "2021-10-28",
+      "userId": 1,
+      "notesCategoryId": 1,
+      "id": 5
     }
   ],
   "taskCategory": [

@@ -30,15 +30,20 @@
 }
 .button-wrapper button {
   display: flex;
-  padding: 0px 20px;
-  margin: 15px 10px;
-  padding-bottom: 20px;
-
+  padding: 5px 10px;
+  margin: 10px;
   background: transparent;
   border: none;
   color: #3f5e86;
   font-size: 17px;
   font-weight: 700;
+}
+.button-wrapper button:hover {
+  color: #528ddb;
+  border-radius: 50px;
+  transition: 0.6s;
+  cursor: pointer;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
 .button-wrapper {
   display: flex;
@@ -61,15 +66,18 @@
   color: #3f5e86;
   font-weight: 700;
   font-size: 15px;
+  padding: 5px 10px;
+  border-radius: 50px;
 }
 .main__btn:hover {
   color: #528ddb;
   border-radius: 50px;
   transition: 0.6s;
   cursor: pointer;
-  font-size: 16px;
-  /* box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1); */
+  /* font-size: 16px; */
+  background: white;
   /* Ask which looks better  */
+  padding: 5px 10px;
 }
 .main__btn svg {
   font-size: 18px;

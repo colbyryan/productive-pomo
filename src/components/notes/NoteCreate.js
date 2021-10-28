@@ -57,10 +57,10 @@ export const NoteCreate = () => {
             <div className="form__flex">
                 <form>
 
-                    <div className="form__add-note">
+                    <div className="form__add-task">
                         Add a New Note
                     </div>
-                    <fieldset>
+                    <fieldset className="form__fieldset">
                         <select name="categories" id="notesCategoryId" onChange={handleControlledInputChange}>
                             {categories.map(category => (
                                 <option key={category.id} value={category.id} className="form__note-category">{category.name}</option>
@@ -72,7 +72,7 @@ export const NoteCreate = () => {
                             <input type="text" id="note" onChange={handleControlledInputChange} required autoFocus className="fieldset__group--edit" placeholder="Note" value={note.note} />
                         </div>
 
-                        <div className="fieldset__group">
+                        <div className="fieldset__group-date-notes">
                             <label htmlFor="date">Date: </label>
                             <input type="date" id="date" onChange={handleControlledInputChange} required className="fieldset__group--edit" />
                         </div>
