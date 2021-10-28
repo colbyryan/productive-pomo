@@ -5,7 +5,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
-  color: black;
+  color: #293241;
+  transition: 1s;
 }
 
 code {
@@ -21,7 +22,54 @@ code {
   background-color: rgb(39, 38, 48);
   color: white;
 }
-
+.dark-mode button {
+  color: white;
+}
+.dark-mode .main__btn {
+  color: white;
+}
+.dark-mode .task__header {
+  color: white;
+}
+.dark-mode .nav__buttons button {
+  color: white;
+}
+.dark-mode .nav__buttons svg {
+  color: white;
+}
+.dark-mode .form__add-task {
+  color: white;
+}
+.dark-mode .form__button {
+  color: white;
+}
+.dark-mode .task__card--buttons button {
+  color: #56cfe1;
+}
+.dark-mode .task__card--buttons button:hover {
+  color: white;
+}
+.dark-mode .note__card--buttons button {
+  color: #56cfe1;
+}
+.dark-mode .note__card--buttons button:hover {
+  color: white;
+}
+.dark-mode .form--login button {
+  color: white;
+}
+.dark-mode .cancel a {
+  color: white;
+}
+.dark-mode .cancel a:visited {
+  color: white;
+}
+.dark-mode .link--register a {
+  color: white;
+}
+.dark-mode .form__container--heading {
+  color: white;
+}
 .wrapper__lists {
   display: flex;
   flex-direction: row;

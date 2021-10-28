@@ -9,7 +9,7 @@ const CountDown = ({ timer, animate, children }) => {
     const [key, setKey] = useState(0)
 
     let dark = ['#293241', 1]
-    let light = ['#FFFFFF', 1]
+    let light = ['#56cfe1', 1]
     return (
         <>
 
@@ -31,7 +31,7 @@ const CountDown = ({ timer, animate, children }) => {
             </CountdownCircleTimer>
 
             <div className="button-wrapper">
-                <button onClick={() => setKey(prevKey => prevKey + 1)}>
+                <button className="main__btn" onClick={() => setKey(prevKey => prevKey + 1)}>
                     Restart Timer
                 </button>
             </div>

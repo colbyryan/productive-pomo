@@ -33,7 +33,7 @@ export const NoteList = () => {
         <>
             <section className="note__section">
                 <div className="note__top">
-                    <div className="note__header">Notes</div>
+                    <div className="task__header">Notes</div>
                     <div className="note__card">
                         <select name="Category" id="" onChange={(evt) => { getNotes(evt.target.value) }}>
                             <option value={selectedCategory}>Select a Category</option>
@@ -43,7 +43,7 @@ export const NoteList = () => {
                         </select>
                     </div>
                     <Link to={`notes/create`}>
-                        <button className="add__note">Add a Note</button>
+                        <button className="add__note">+ Note</button>
                     </Link>
 
                 </div>

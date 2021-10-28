@@ -43,7 +43,7 @@ export const Login = () => {
                 <form className="form--login" onSubmit={handleLogin}>
                     <h1>Productive Pomo</h1>
                     <div className="second__login--container">
-                        <fieldset>
+                        <fieldset className="fieldset__login">
                             <h2>Login</h2>
                             <p> Enter Email address </p>
                             <label htmlFor="inputEmail"></label>

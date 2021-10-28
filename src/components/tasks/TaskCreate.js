@@ -63,7 +63,8 @@ export const TaskCreate = () => {
                     <div className="form__add-task">
                         Add a New Task
                     </div>
-                    <fieldset>
+                    <fieldset className="form__fieldset">
+
                         <select name="categories" id="taskCategoryId" onChange={handleControlledInputChange}>
                             {categories.map(category => (
                                 <option key={category.id} value={category.id} className="form__task-category">{category.name}</option>
@@ -72,10 +73,10 @@ export const TaskCreate = () => {
 
                         <div className="fieldset__group">
                             <label htmlFor="name">Enter Task: </label>
-                            <input type="text" id="name" onChange={handleControlledInputChange} required autoFocus className="fieldset__group--edit" placeholder="task" value={task.name} />
+                            <input type="text" id="name" onChange={handleControlledInputChange} required autoFocus className="fieldset__group--edit" placeholder="Enter Task..." value={task.name} />
                         </div>
 
-                        <div className="fieldset__group">
+                        <div className="fieldset__group-date">
                             <label htmlFor="date">Select Due Date: </label>
                             <input type="date" id="date" onChange={handleControlledInputChange} required className="fieldset__group--edit" />
                         </div>

@@ -47,7 +47,7 @@ export const SetPomo = () => {
     return (
         <div className="form_container">
             <form noValidate onSubmit={handleSubmit}>
-                <h4>Please set times</h4>
+                <h4 className="form__container--heading">Please set times</h4>
                 <div className="input-wrapper">
                     <input type="number" name="work" className="input" onChange={handleChange} value={newTimer.work} />
                     <input type="number" name="shortBreak" className="input" onChange={handleChange} value={newTimer.short} />
