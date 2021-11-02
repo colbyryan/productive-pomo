@@ -1,6 +1,6 @@
 # Productive Pomo
 
-![Home Page Image](./Images/productivepomo.png))
+![Home Page Image](https://github.com/colbyryan/productive-pomo/blob/main/src/Images/productivepomo.png?raw=true))
 
 > Productive Pomo, focus and flow!
 
@@ -136,7 +136,7 @@ Create database.json file inside of the src directory and paste the following JS
 
 ```
 
-![ERD Image]())
+![ERD Image](https://github.com/colbyryan/productive-pomo/blob/main/src/Images/ERD.png?raw=t))
 
 [Back To The Top](#productive-pomo)
 
