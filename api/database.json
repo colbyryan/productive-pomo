@@ -32,82 +32,138 @@
     },
     {
       "id": 4,
-      "name": "Test Test ",
-      "date": "2021-10-27",
+      "name": "Test Test edit",
+      "date": "2021-10-29",
       "isComplete": false,
       "userId": 1,
-      "taskCategoryId": 2
+      "taskCategoryId": 2,
+      "isCompleted": true
     },
     {
-      "id": 6,
-      "name": "Hello Scott",
-      "date": "2021-10-28",
+      "id": 5,
+      "name": "Finish Productive Pomo application completely",
+      "date": "2021-12-01",
       "isComplete": false,
       "userId": 1,
       "taskCategoryId": 3
     },
     {
-      "id": 8,
-      "name": "Ask Susie which button styling looks better",
-      "date": "2021-10-28",
-      "isComplete": false,
+      "name": "Update code for Productive Pomo.",
+      "date": "2021-12-15",
+      "isCompleted": false,
       "userId": 1,
-      "taskCategoryId": 1
+      "taskCategoryId": 3,
+      "id": 6
     },
     {
-      "name": "Pick different colors for dark mode.",
-      "date": "2021-10-28",
+      "name": "Sign up for a domain to host Productive Pomo",
+      "date": "2021-12-31",
+      "isCompleted": false,
+      "userId": 1,
+      "taskCategoryId": 3,
+      "id": 7
+    },
+    {
+      "name": "Finish task section on productive pomo",
+      "date": "2021-11-05",
+      "isCompleted": false,
+      "userId": 1,
+      "taskCategoryId": 1,
+      "id": 8
+    },
+    {
+      "name": "Finish notes section on productive pomo",
+      "date": "2021-11-05",
       "isCompleted": false,
       "userId": 1,
       "taskCategoryId": 1,
       "id": 9
     },
     {
-      "name": "Make presentation for demo day.",
-      "date": "2021-10-28",
+      "name": "Finish the timer section on productive pomo",
+      "date": "2021-11-05",
+      "isCompleted": false,
+      "userId": 1,
+      "taskCategoryId": 1,
+      "id": 10
+    },
+    {
+      "name": "Research more about the timer npm. ",
+      "date": "2021-11-05",
       "isCompleted": false,
       "userId": 1,
       "taskCategoryId": 1,
       "id": 11
     },
     {
-      "name": "Style login and register page.",
-      "date": "2021-10-28",
+      "name": "Finish the login register page. ",
+      "date": "2021-11-05",
       "isCompleted": false,
       "userId": 1,
       "taskCategoryId": 1,
       "id": 12
     },
     {
-      "name": "Stress test every feature on app.",
-      "date": "2021-10-28",
+      "id": 13,
+      "name": "Finish README for Productive Pomo",
+      "date": "2021-11-08",
+      "isComplete": false,
+      "userId": 1,
+      "taskCategoryId": 2
+    },
+    {
+      "name": "Finish presentation for Productive Pomo",
+      "date": "2021-11-08",
       "isCompleted": false,
       "userId": 1,
-      "taskCategoryId": 1,
-      "id": 13
+      "taskCategoryId": 2,
+      "id": 14
+    },
+    {
+      "name": "Read through the capstone section on Github",
+      "date": "2021-11-10",
+      "isCompleted": false,
+      "userId": 1,
+      "taskCategoryId": 2,
+      "id": 15
+    },
+    {
+      "name": "Research dark mode styling on stackoverflow",
+      "date": "2021-11-11",
+      "isCompleted": false,
+      "userId": 1,
+      "taskCategoryId": 2,
+      "id": 16
     }
   ],
   "notes": [
     {
-      "note": "Test Note Personal test",
-      "date": "2021-10-27",
+      "note": "Make sure to focus on taking notes in class. ",
+      "date": "2021-11-04",
       "userId": 1,
-      "notesCategoryId": 2,
-      "id": 3
+      "notesCategoryId": 1,
+      "id": 1
     },
     {
       "note": "Remember to ask Susie about some of the styling colors and buttons",
-      "date": "2021-10-28",
+      "date": "2021-11-05",
       "userId": 1,
       "notesCategoryId": 1,
-      "id": 4
+      "id": 2
     },
     {
-      "note": "Test Note",
-      "date": "2021-10-28",
+      "id": 3,
+      "note": "Take breaks today and relax. Don't get burnt out.  ",
+      "date": "2021-11-05",
       "userId": 1,
-      "notesCategoryId": 1,
-      "id": 5
+      "notesCategoryId": 2
+    },
+    {
+      "note": "Complete two courses on NetNinja about React.js",
+      "date": "2021-11-04",
+      "userId": 1,
+      "notesCategoryId": 2,
+      "id": 4
     }
   ],
   "taskCategory": [

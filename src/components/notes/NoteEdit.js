@@ -28,7 +28,6 @@ export const NoteEdit = () => {
     const updateExistingNote = (e) => {
         e.preventDefault()
         setIsLoading(true);
-
         const editedNote = {
             id: noteId,
             note: note.note,
@@ -46,7 +45,7 @@ export const NoteEdit = () => {
         getNoteById(noteId)
             .then(note => {
                 setNote(note)
-                setIsLoading(true);
+                setIsLoading(false);
             })
     }, [noteId]);
     return (
