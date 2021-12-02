@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react'
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 import { SettingContext } from '../../context/SettingsContext'
 import "./Timer.css"
+// const Sound = require("../../Audio/sound.mp3")
+
 
 const CountDown = ({ timer, animate, children }) => {
 
@@ -23,6 +25,8 @@ const CountDown = ({ timer, animate, children }) => {
                 trailColor={darkMode ? 'rgb(39, 38, 48)' : '#FFFFFF'}
                 onComplete={() => {
                     stopAnimate()
+                    new Audio("https://assets.coderrocketfuel.com/pomodoro-times-up.mp3").play();
+
                 }}
             >
 
