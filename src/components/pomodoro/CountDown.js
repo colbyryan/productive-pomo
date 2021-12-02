@@ -1,15 +1,15 @@
 import React, { useContext, useState } from 'react'
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 import { SettingContext } from '../../context/SettingsContext'
-import { Sound } from "../../Audio/sound.mp3"
 import "./Timer.css"
+// const Sound = require("../../Audio/sound.mp3")
+
 
 const CountDown = ({ timer, animate, children }) => {
 
     const { stopAnimate, darkMode } = useContext(SettingContext)
     const [key, setKey] = useState(0)
 
-    var alert = new Audio(Sound)
     let dark = ['#293241', 1]
     let light = ['#56cfe1', 1]
     return (
@@ -25,7 +25,8 @@ const CountDown = ({ timer, animate, children }) => {
                 trailColor={darkMode ? 'rgb(39, 38, 48)' : '#FFFFFF'}
                 onComplete={() => {
                     stopAnimate()
-                    alert.play();
+                    new Audio("https://assets.coderrocketfuel.com/pomodoro-times-up.mp3").play();
+
                 }}
             >
 
